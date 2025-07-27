@@ -1,2 +1,2 @@
 # hello world 
-este es mi primer readme
+Es mi primer readme
