@@ -1,0 +1,328 @@
+  <!DOCTYPE html>
+<html>
+<head>
+
+<style>
+  body {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightGray;
+  background-size: cover;
+}
+#dado {
+  text-align: center;
+  color: green;
+ font-size: 25px; 
+  }
+#dido {
+  text-align: center;
+  color: blue;  
+font-size: 25px;  
+}
+  #dedo {
+  text-align: center;
+  color: blue;  
+font-size: 25px;  
+}
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#aside {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+</style>
+
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+<script>
+</script>
+</head>
+<body>
+ 
+<div id="header">
+<h1> Estudio de Frances</h1>
+</div>
+ 
+
+
+Traduccion.<br>
+<center><button onclick = nota2() >Frances... </button></center>
+  
+  
+  
+  
+<script>
+  //Para reclamo solo se utiliza lo que esta marcado con reclamo y nada mas
+//  https://forms.gle/jLcQU9sTvE5Rf9gQ8 no se si voy a borrar
+// para utilizar examen de mesa y segunda instancia
+  
+  
+function nota2(){
+var a =prompt("Numero");
+
+
+
+
+ var h = {
+0:	["Pendant longtemps",		"Durante mucho tiempo"],
+1:	["J'aime les légumes, cependant je mange de la viande",		"Me gustan las verduras, sin embargo como carne."],
+2:	["Il parle vite.",		"habla rapido"],
+3:	["Nous parlons vite.",		"hablamos deprisa"],
+4:	["Est-ce déjà trop tard?",		"¿Ya es demasiado tarde?"],
+5:	["cependant c'est trop cher",		"Sin embargo, es demasiado caro."],
+6:	["Voilà nos enfants.",		"He ahí a nuestros hijos."],
+7:	["Vous etes plutot beaux",		"Son más bien guapos."],
+8:	["Lui, il lit autant aue moi",		"Él lee tanto como yo."],
+9:	["Pouvez-vous m'appeler plus tard ?",		"¿Puede usted llamarme más tarde?"],
+10:	["tu parles autant que moi",		"Hablas tanto como yo."],
+11:	["Vous parlez trop vite pour moi.",		"Usted habla demasiado rápido para mí."],
+12:	["c'est plutot difficile",		"Es más bien difícil."],
+13:	["Autant que toi",		"Tanto como tu"],
+14:	["nous voila",		"¡Henos ahí!"],
+15:	["Elle est là depuis longtemps.",		"ella esta aquí desde hace mucho tiempo"],
+16:	["Tu parles bientot",		"Hablas pronto."],
+17:	["Joue dehors",		"Juega afuera."],
+18:	["Elle, elle écrit plus simplement",		"Ella escribe más simplemente."],
+19:	["Elle est vraiment belle.",		"ella es realmente bonita"],
+20:	["Je mange toujours dehors",		"Siempre como afuera."],
+21:	["Elle est partout.",		" esta en         todos lados"],
+22:	["Nous mangeons bientot",		"comemos pronto"],
+23:	["Il pleut partout.",		"llueve en todos lados"],
+24:	["il est tellement grand",		"¡Es tan grande!"],
+25:	["c?est vraiment une jupe courte.",		"Es realmente una falda corta."],
+26:	["Ensuite c'est très simple.",		"despues es muy simple"],
+27:	["Il parle plus simplement.",		"El habla mas simplemente"],
+28:	["que fault il boire ensuite",		"¿Qué hay que beber a continuación?"],
+29:	["il pleut dehors",		"llueve afuera"],
+30:	["je lis beaucoup notamment des livres",		"Leo mucho, especialmente libros."],
+31:	["Elle parle lors du dîner.",		"ella habla durante la cena"],
+32:	["voaci une lettre pour vous",		"He aquí una carta para usted."],
+33:	["Elle est particulierement riche",		"Es particularmente rica."],
+34:	["Il faut aller au-delà.",		"Hay que ir más allá."],
+35:	["il parle lors du diner",		"Habla durante la cena."],
+36:	["Que sont- ils  exactament",		"¿Qué son exactamente?"],
+37:	["voici ton  livre ",		"He aquí tu libro."],
+38:	["Elle écrit souvent, des lettres notamment.",		"ella escribe a menudo especialmente cartas"],
+39:	["L'enfant ressemble davantage    son pere",		"El niño se parece más a su padre."],
+40:	["Tu veux aller au dela",		"Quieres ir más allá."],
+41:	["Il écrit souvent, des lettres notamment.",		"escribe a menudo cartas "],
+42:	["L'enfant ressemble davantage à son père.",		"el  niño se parece mas a su padre"],
+43:	["L'enfant ressemble davantage à sa mère.",		"el  niño se parece mas a su madre"],
+44:	["Évidemment !",		"evidentemente"],
+45:	["elle marche rapidement",		"Ella camina rápido."],
+46:	["Postérieurement au mariage",		"despues del matrimonio"],
+47:	["il est evidemment   malade",		"Está evidentemente enfermo."],
+48:	["nous buvons   rapidement",		"Bebemos rápidamente"],
+49:	["elle se leve tot",		"Se levanta temprano."],
+50:	["nous lisons ce menu posterieurement",		"Leemos este menú posteriormente"],
+51:	["beaucoup plus tot",		"Mucho más temprano"],
+52:	["il est trop tot",		"Es demasiado temprano."],
+53:	["Nous lisons ce menu postérieurement.",		"Leemos este menú posteriormente"],
+54:	["En un mois environ",		"En un mes aproximadamente"],
+55:	["Dans un mois environ",		"dentro de um mes aproximadamente"],
+56:	["Il y a environ un mois",		"Hace alrededor de un mes."],
+57:	["Il y a environ un an.",		"Hace alrededor de un año"],
+58:	["Elle se lève tôt.",		"Se levanta temprano."],
+59:	["il est evidemment   malade",		"Está evidentemente enfermo."],
+60:	["Il fait particulièrement chaud aujourd'hui.",		"hace bastante calor hoy"],
+61:	["Cependant, c'est trop cher.",		"Sin embargo, es demasiado caro."],
+62:	["il est au dessus de moi",		"Está por encima de mí."],
+63:	["merci encore",		"¡Gracias nuevamente!"],
+64:	["les jours sont de  plus en plus longs",		"Los días son cada vez más largos."],
+65:	["J'aime marcher dessus ",		"Me gusta pisar."],
+66:	["Elle est tellement grande",		"¡Es tan alta!"],
+67:	["Elle est presque aussi grande que vous",		"Es casi tan alta como usted."],
+68:	["je reve trop",		"sueño demasiado"],
+69:	["Cependant, c'est trop cher.",		"Sin embargo, es demasiado caro."],
+70:	["Je vois la police.",		"veo la policia"],
+71:	["C'est son métier.",		"es su oficio"],
+72:	["Mon pere travaille dans l' education",		"Mi padre trabaja en educación."],
+73:	["Le fromage est pour le roi.",		"el queso es para el rey"],
+74:	["tu est ma petite princesse",		"Eres mi princesita."],
+75:	["Elle a une secrétaire.",		"Ella tiene una secretaria"],
+76:	["Mon fils est journaliste",		"Mi hijo es periodista."],
+77:	["je  veux parler un avocat ",		"Quiero hablar con un abogado."],
+78:	["Mon frère veut être ingénieur.",		"Mi hermano quier ser ingeniero"],
+79:	["Vous ecrivez sur le personnel",		"Usted escribe sobre el personal."],
+80:	["Elle est journaliste.",		"es periodista"],
+81:	["je ai un avocat",		"Tengo un abogado."],
+82:	["Il prefere prendre sa retraite",		"Él prefiere jubilarse."],
+83:	["Ou est le chef",		"¿Dónde está el jefe?"],
+84:	["il est ingenieur",		"es ingeniero"],
+85:	["elle mange avec     son personnel",		"Ella come con su personal."],
+86:	["Mon pere est ingenieur",		"mi papa es ingeniero"],
+87:	["OUI je suis un prince",		"Sí, soy un príncipe."],
+88:	["les policiers ont des chemises bleues",		"Los policías tienen camisas azules."],
+89:	["Ce sont des soldats",		"Son soldados."],
+90:	["tu es ma petite princesse",		"Eres mi princesita."],
+91:	["Mon profeseur boit du jus de tomate",		"Mi profesor toma jugo de tomate."],
+92:	["sa tante travaille dans l'education",		"Su tía trabaja en educación."],
+93:	["il  connait son metier",		"Conoce su oficio."],
+94:	["il trouve un emploi",		"Encuentra un empleo."],
+95:	["le roi",		"el rey"],
+96:	["la nourriture est pour les  rois",		"La comida es para los reyes."],
+97:	["Sa carrière est longue.",		"su carrera es larga"],
+98:	["tu est ma princesse",		"Eres mi princesa."],
+99:	["Est juge",		"Es juez"],
+100:	["mon oncle et ma tante sont docteurs",		"Mi tío y mi tía son doctores."],
+101:	["Je cherche une secrétaire.",		"busco una secretaria"],
+102:	["tu ecris sur le personnel",		"Escribes sobre el personal."],
+103:	["Il est enseignant.",		"es docente "],
+104:	["nous voulons prende notre retraite",		"Nosotros queremos jubilarnos."],
+105:	["qui est mon avocate",		"¿Quién es mi abogada?"],
+106:	["Il est enseignant.",		"Es docente."],
+107:	["mon frere veut etre ingenieur",		"Mi hermano quiere ser ingeniero."],
+108:	["Je suis serveur.",		"Soy camarera"],
+109:	["je suis cuisinier",		"Soy cocinero."],
+110:	["Je suis serveur.",		"soy camarero"],
+111:	["le policier a une ceinture",		"El policía tiene un cinturón."],
+112:	["les policieres ont des chemises bleues",		"Los policías tienen camisas azules."],
+113:	["Il prefere prendre sa retraite",		"Él prefiere jubilarse."],
+114:	["le cuisinier pese la viande",		"El cocinero pesa la carne"],
+115:	["Ce sont des soldats",		"Son soldados"],
+116:	["Mais Je m'ennuie",		"Pero estoy aburrido"],
+117:	["il est au dessus de moi",		"el esta por encima de mi"],
+118:	["ca va mal",		"las cosas van mal"],
+119:	["Ou est le chef",		"donde esta el jefe"],
+120:	["Rien maman",		"nada mama"],
+121:	["yo tampoco",		"Moi non plus"],
+122:	["",		""],
+123:	["Elle n'a  péur de rien",		"Ella no tiene miedo de nada"],
+124:	["Je n'ai pas le temps.",		"no tengo tiempo"],
+125:	["Maintenant ou jamais !",		"Ahora o nunca"],
+126:	["J'aime manger du pain et de la confiture.",		"me gusta comer pan y mermelada"],
+127:	["Je ne l'ai pas.",		"no la  tengo"],
+128:	["ne",		"no"],
+129:	["Je ne  peux plus rien de manger",		"No puedo comer nada más."],
+130:	["Je n'ai pas le temps.",		"no tengo tiempo"],
+131:	["Elle ne tient pas.",		"No cabe"],
+132:	["Ni moi",		"Ni yo"],
+133:	["La petite fille ne boit ni jus ni lait.",		"la niña no bebe ni jugo ni leche"],
+134:	["Il n'y a pas de sel.",		"no hay sal"],
+135:	["Il n'y a plus de lait",		"No hay mas leche"],
+136:	["Il n'y a plus de sel.",		"no hay sal"],
+137:	["Personne ne me parle.",		"nadie no me habla"],
+138:	["Il n'y a personne.",		"no hay nadie"],
+139:	["Personne ne comprend pourquoi.",		"Nadie entiende por qué."],
+140:	["Il n'est pas du tout jeune.",		"No es para nada joven."],
+141:	["je ne suis pas du tout d'accord avec vous",		"No estoy para nada de acuerdo con usted."],
+142:	["Elle ne peut pas lire ni écrire.",		"Ella no puede leer ni escribir"],
+143:	["Je ne suis pas du tout d'accord avec toi.",		"No estoy para nada de acuerdo contigo."],
+144:	["Je ne veux ni ces chaussures ni ce pantalon",		"No quiero ni estos zapatos ni este pantalon"],
+145:	["Personne ne me parle.",		"Nadie me habla"],
+146:	["il n'y a personne",		"No hay nadie."],
+147:	["Personne ne comprend pourquoi.",		"Nadie entiende por qué."],
+148:	["Je ne suis pas du tout d'accord avec toi.",		"yo no estoy para nada de acuerdo contigo"],
+149:	["Ce n'est pas simple",		"No es simple."],
+150:	["il n'est pas encore la",		"Él aún no está aquí."],
+151:	["Moi non plus je peux pas",		"Yo tampoco puedo."],
+152:	["Tu manques à tes enfants.",		"Tus hijos te echan de menos."],
+153:	["C'est mon petit frere ",		"es mi hermano menor"],
+154:	["je suis cuisinier",		"Soy cocinero"],
+155:	["Elle est près de ses enfants",		"Ella está cerca de sus hijos."],
+156:	["Mes enfants dorment",		"Mis hijos duermen."],
+157:	["Mon frère les cherche.",		"mi hermano los busca"],
+158:	["Je cherche mon frère.",		"Busco a mi hermano."],
+159:	["il est professeur",		"el es profesor"],
+160:	["Comment va mon cousin",		"¿Cómo está mi primo?"],
+161:	["Oui il semble malade",		"Sí, parece enfermo."],
+162:	["Mes parents mangent du riz",		"Mis padres comen arroz."],
+163:	["As tu un bebe",		"¿Tienes un bebé?"],
+164:	["Je marche le matin.",		"Camino por la mañana."],
+165:	["Matin, midi et soir",		"mañana tarde y noche"],
+166:	["je l'attends depuis ce matin",		"Lo espero desde esta mañana."],
+167:	["J'aime penser.",		"Me gusta pensar."],
+168:	["il continue a marche",		"el sigue caminando"],
+169:	["Je veux parler avec un avocat.",		"Quiero hablar con un abogado."],
+170:	["Je dois un poulet",		"Debo un pollo."],
+171:	["Avec qui etes vous ce soir",		"¿Con quién están esta noche?"],
+172:	["vous venez",		"usted  viene"],
+173:	["il est   ainsi",		"El es asi"],
+174:	["en plus il est tres gentil",		"Además, él es muy bueno."],
+175:	["le vert ne va pas avec le rouge.",		"el verde no combina con el rojo"],
+176:	["je n' ai rien",		"No tengo nada"],
+177:	["Parfois c'est plus pres",		"A veces esta mas cerca"],
+178:	["je ne vois rien",		"No veo nada."],
+179:	["Tu portes une robe mais la robe n'est pas verte.",		"llevas un vestido pero el  vestido no es verde"],
+180:	["il ne me demande jamais",		"el nunca me pregunta"],
+181:	["Les chaussures ne tiennent pas",		"Los zapatos no caben."],
+182:	["Ma tante n'a plus de lait.",		"Mi tia no tiene mas leche"],
+183:	["C'est maintenant ou jamais.",		"Es ahora o nunca"],
+184:	["Ce n'est pas  simple",		"No es simple."],
+185:	["il ne me demande jamais",		"el nunca me pregunta"],
+186:	["Il n'y a personne.",		"No hay nadie."],
+187:	["Personne ne comprend pourquoi.",		"Nadie entiende por qué."],
+188:	["Personne ne me parle.",		"Nadie me  habla"],
+189:	["Je ne lis pas, ni n'écris.",		"No leo, ni escribo."],
+190:	["il n'y a pas de sel",		"no hay sal"],
+191:	["elle ne  peut lire ni ecrire",		"ella no sabe leer ni escribir"],
+192:	["Je ne suis pas du tout d'accord avec vous.",		"No estoy de acuerdo para nada con usted"],
+193:	["Il   n'y a plus de sel",		"No queda sal."],
+194:	["Ni cafe au lait ni cafe noir",		"Ni café con leche, ni café solo"],
+195:	["Il n'est pas du tout jeune.",		"el no es para nada joven"],
+196:	["Je ne suis pas du tout d'accord avec toi.",		"No estoy para nada de acuerdo contigo."],
+197:	["Les jours sont de plus en plus longs",		"Los días son cada vez más largos."],
+198:	["il n'est  pas encore la",		"Él aún no está aquí."],
+199:	["Ce n'est pas pour vous.",		"No es para usted."],
+200:	["Demain, ce n'est pas vendredi.",		"Mañana no es viernes."],
+201:	["les vacances ne sont pas en mars",		"Las vacaciones no son en marzo."],
+202:	["Je n'ai rien.",		"No tengo nada"],
+203:	["Ce n'est pas la même couleur.",		"no es el mismo color"],
+204:	["Elle n' a plus du pain",		"No tiene más pan."],
+205:	["je ne suis pas de tout d' accord avec vous",		"No estoy de acuerdo para nada con usted"],
+206:	["Le chapeau lui va parfaitement.",		"el sombrero le queda perfectamente"],
+207:	["Il regarde dessous.",		"mira debajo"],
+208:	["Je pense autrement.",		"Pienso de otra manera"],
+209:	["Impossible de faire  autorement",		"Imposible hacer de otra manera"],
+210:	["Non, actuellement non.",		"No actualmente no"],
+211:	["Ils jouent dedans.",		"juegan adentro"],
+212:	["Je suis absolument sûr.",		"Estoy absolutamente seguro"],
+213:	["Un jour, certainement !",		"Algun dia sin duda alguna"],
+214:	["C'est certainement mon cousin.",		"es sin duda mi primo"],
+215:	["Ils arrivent immédiatement.",		"llegan inmediatamente"],
+216:	["Il est important d'appeler la police immédiatement.",		"Es importante llamar a la policía inmediatamente."],
+217:	["Elle parle précisément.",		"habla de manera precisa"],
+218:	["Parfois elle peut être entièrement rouge.",		"A veces puede estar enteramente roja"],   
+70:	["Je vois la police.",		"veo la policia"]};
+ 
+
+// if(h.hasOwnProperty(a)){alert( "Nota"+"  "+ h[a][2]) }
+//if(h.hasOwnProperty(a)){alert( "Hay el codigo") }
+
+//else { alert ('No existe el codigo')};
+
+
+
+
+ document.getElementById("dado").innerHTML =  h[a][0];
+document.getElementById("dido").innerHTML =  h[a][1];
+document.getElementById("dedo").innerHTML =  a;
+ 
+}
+</script>
+
+<p id="dado"></p>
+<p id="dido"></p>
+<p id="dedo"></p>  
+<html>
